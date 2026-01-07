@@ -697,7 +697,7 @@ button {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -1184,6 +1184,13 @@ button {
 /* ===================================
    RESPONSIVE - TABLET
    =================================== */
+@media (max-width: 1200px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .nav-menu {
     gap: 1.5rem;
@@ -1193,9 +1200,13 @@ button {
     gap: 1rem;
   }
 
-  .services-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .guarantees-grid {
@@ -1274,9 +1285,13 @@ button {
   }
 
   /* Services & Pricing */
-  .services-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   /* Guarantees */
@@ -1298,6 +1313,27 @@ button {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-contact li {
+    justify-content: center;
+  }
+
+  .payment-methods {
+    justify-content: center;
+  }
+
+  .footer-badge {
+    justify-content: center;
   }
 
   /* WhatsApp Float */
